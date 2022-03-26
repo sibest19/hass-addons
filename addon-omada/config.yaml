@@ -1,9 +1,9 @@
 ---
 name: Omada SDN Controller
-version: dev
+version: 0.1.0-dev
 slug: omada
 description: Manage your TP-Link Omada network using a web browser
-url: https://github.com/sibest19/addon-unifi
+url: https://github.com/sibest19/addon-omada
 webui: https://[HOST]:[PORT:8043]
 codenotary: codenotary@frenck.dev
 startup: services

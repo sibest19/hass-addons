@@ -7,6 +7,7 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
+    maintainer="Matt Bentley <mbentley@mbentley.net>" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
     org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
@@ -19,14 +20,11 @@ LABEL \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
 
-LABEL maintainer="Matt Bentley <mbentley@mbentley.net>"
-
 ARG OMADA_VER=5.1.7
 ARG OMADA_TAR="Omada_SDN_Controller_v${OMADA_VER}_Linux_x64.tar.gz"
 ARG OMADA_URL="https://static.tp-link.com/upload/software/2022/202203/20220322/${OMADA_TAR}"
 # valid values: amd64 (default) | arm64 | armv7l
-# TODO: make dynamic
-ARG ARCH="amd64"
+ARG ARCH=amd64
 
 COPY install.sh healthcheck.sh /
 
