@@ -3,7 +3,7 @@ name: Omada SDN Controller
 version: 0.1.0-dev
 slug: omada
 description: Manage your TP-Link Omada network using a web browser
-url: https://github.com/sibest19/addon-omada
+url: https://github.com/sibest19/hass-addons/tree/main/addon-omada
 webui: https://[HOST]:[PORT:8043]
 codenotary: codenotary@frenck.dev
 startup: services
@@ -35,3 +35,4 @@ schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   memory_max: int?
   memory_init: int?
+image: "ghcr.io/sibest19/{arch}-addon-omada"
