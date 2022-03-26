@@ -1,7 +1,7 @@
 ---
 name: Omada SDN Controller
-version: 0.1.0-dev
-slug: omada
+version: 0.8.0-dev
+slug: addon-omada
 description: Manage your TP-Link Omada network using a web browser
 url: https://github.com/sibest19/hass-addons/tree/main/addon-omada
 webui: https://[HOST]:[PORT:8043]

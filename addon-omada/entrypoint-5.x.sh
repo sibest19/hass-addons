@@ -62,6 +62,8 @@ then
   set_port_property portal.https.port 8843 "${PORTAL_HTTPS_PORT}"
 fi
 
+chown -R 508:508 "/data"
+
 # make sure permissions are set appropriately on each directory
 for DIR in data work logs
 do

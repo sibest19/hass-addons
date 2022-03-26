@@ -15,7 +15,7 @@ die() { echo -e "$@" 2>&1; exit 1; }
 PKGS=(
   gosu
   net-tools
-  openjdk-8-jre-headless
+  openjdk-11-jre-headless
   tzdata
   wget
 )
@@ -96,3 +96,9 @@ chown -R omada:omada "${OMADA_DIR}/data" "${OMADA_DIR}/logs" "${OMADA_DIR}/work"
 
 echo "**** Cleanup ****"
 rm -rf /tmp/* /var/lib/apt/lists/*
+
+echo "**** Create Symlinks for Home Assistant persistence ****"
+mkdir "/data" -vp
+ln -s "${OMADA_DIR}/data" "/data/data"
+ln -s "${OMADA_DIR}/logs" "/data/logs"
+ln -s "${OMADA_DIR}/work" "/data/work"
