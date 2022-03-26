@@ -96,3 +96,6 @@ chown -R omada:omada "${OMADA_DIR}/data" "${OMADA_DIR}/logs" "${OMADA_DIR}/work"
 
 echo "**** Cleanup ****"
 rm -rf /tmp/* /var/lib/apt/lists/*
+
+echo "**** Allow data to be persited in Home Assistant ****"
+ln -s /data "${OMADA_DIR}"
